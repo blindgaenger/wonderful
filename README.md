@@ -1,4 +1,4 @@
-# I Love You
+# Wonderful
 
 happy path testing … for those who are blinded by love
 
@@ -38,3 +38,7 @@ But the same happens if your honey isn't the right one and she doesn't answer yo
     I.just_called(honey).to_say(:i_love_you).and_i_mean(:i_love_you_too) # => HangUpError
 
 Yep, that's all!
+
+## Dependencies
+
+No Strings Attached! All you need is love … but that's another story.
