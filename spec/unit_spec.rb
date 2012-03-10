@@ -1,7 +1,6 @@
+require 'wonderful'
 require 'minitest/spec'
 require 'minitest/autorun'
-
-require 'wonderful'
 
 module Wonderful
   describe Wonderful do

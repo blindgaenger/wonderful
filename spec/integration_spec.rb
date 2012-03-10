@@ -1,7 +1,6 @@
+require 'wonderful'
 require 'minitest/spec'
 require 'minitest/autorun'
-
-require 'wonderful'
 
 class Honey
   def i_love_you(subtext=nil)
