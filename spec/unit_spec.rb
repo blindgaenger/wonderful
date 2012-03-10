@@ -66,7 +66,9 @@ module Wonderful
         end
 
         it 'hangs up if you dont know what I am saying' do
-          ->{ Declaration.new(@call, :whassup).and_i_mean_it }.must_raise HangUpError
+          lambda {
+            Declaration.new(@call, :whassup).and_i_mean_it
+          }.must_raise HangUpError
         end
       end
 
@@ -83,7 +85,9 @@ module Wonderful
 
         it 'hangs up if the answer is wrong' do
           @you.expect(:send, :i_love_you_too, [:i_love_you])
-         ->{ Declaration.new(@call, :i_love_you).and_i_mean(:whassup) }.must_raise HangUpError
+          lambda {
+            Declaration.new(@call, :i_love_you).and_i_mean(:whassup)
+          }.must_raise HangUpError
         end
       end
     end

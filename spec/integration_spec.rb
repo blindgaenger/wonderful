@@ -23,13 +23,13 @@ describe Wonderful do
   end
 
   it 'hangs up, if it is not love' do
-    ->{
+    lambda {
       Wonderful::I.just_called(Honey.new).to_say(:whassup).and_i_mean(:i_love_you_too)
     }.must_raise Wonderful::HangUpError
   end
 
   it 'hangs up, if it is not for ever' do
-    ->{
+    lambda {
       Wonderful::I.just_called(Honey.new).to_say(:i_love_you, :sometimes).and_i_mean(:oh_stevie)
     }.must_raise Wonderful::HangUpError
   end
